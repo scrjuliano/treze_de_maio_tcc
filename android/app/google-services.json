@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "54366451042",
+    "project_id": "treze-de-maio-tcc",
+    "storage_bucket": "treze-de-maio-tcc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54366451042:android:d4233830d9cbb611fde83b",
+        "android_client_info": {
+          "package_name": "com.example.treze_de_maio_tcc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54366451042-g08nipp89bhlbdoo5f2t0v1e5c8g2ami.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.treze_de_maio_tcc",
+            "certificate_hash": "cf8341746347a8c1e454461f0cef8af80d33f200"
+          }
+        },
+        {
+          "client_id": "54366451042-m2n0rmptluulc7jd9m04eaq80mmibk33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn4EOvRjVzol1E6S-5bDRo6sxVTQviNTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "54366451042-m2n0rmptluulc7jd9m04eaq80mmibk33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
