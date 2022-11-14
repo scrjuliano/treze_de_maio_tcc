@@ -26,48 +26,87 @@ class TelaAgenda extends StatelessWidget {
 
                     margin: EdgeInsets.all(20),
                     child: Container(
-                      padding: EdgeInsets.only(top: 110, left: 60, right: 60, bottom: 10),
+                      //padding: EdgeInsets.only(top: 110, left: 60, right: 60, bottom: 10),
 
-                      child: TextButton(
-                        onPressed: () {
-                          showDialog(
-                              context: context,
-                              builder: (context) => AlertDialog(
-                                title: Text('Confirmação'),
-                                content: Text('Tem certeza que deseja cancelar este horario? '
-                                ),
-                                actions: [
-                                  TextButton(
-                                    child: Text('Sim'),
-                                    onPressed: ()=>  Navigator.pushNamed(
-                                      context,
-                                      ('/home'),
-                                    ),
-                                  ),
-                                  TextButton(
-                                    child: Text('Não'),
-                                    onPressed: ()=> Navigator.pop(context),
-                                  )
-                                ],
-                              )
-                          );
-
-                        },
-                        style: ButtonStyle(
-                            backgroundColor:
-                            MaterialStateProperty.all(Colors.red.shade900)),
-                        child: const Text(
-                          "Cancelar agendamento ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 10.0,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: <Widget>[
+                          Text(
+                              "Profissional: ",
+                          textAlign: TextAlign.start,
+                            style: TextStyle(fontWeight: FontWeight.w500),
                           ),
-                          textAlign: TextAlign.center,
-                        ),
+                          SizedBox(height: 12.0,),
+                          Row(
+
+                             children: <Widget>[
+                               Text(
+                                   "Serviço: ",
+                                 textAlign: TextAlign.start,
+                                 style: TextStyle(fontWeight: FontWeight.w500),
+                               )
+                             ],
+                          ),
+                          SizedBox(height: 12.0,),
+                          Row(
+                            children: <Widget>[
+                              Text(
+                                "Horario: ",
+                                textAlign: TextAlign.start,
+                                style: TextStyle(fontWeight: FontWeight.w500),
+                              )
+                            ],
+                          ),
+                          SizedBox(height: 30.0,),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              TextButton(
+                                onPressed: () {
+                                  showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                        title: Text('Confirmação'),
+                                        content: Text('Tem certeza que deseja cancelar este horario? '
+                                        ),
+                                        actions: [
+                                          TextButton(
+                                            child: Text('Sim'),
+                                            onPressed: ()=>  Navigator.pushNamed(
+                                              context,
+                                              ('/home'),
+                                            ),
+                                          ),
+                                          TextButton(
+                                            child: Text('Não'),
+                                            onPressed: ()=> Navigator.pop(context),
+                                          )
+                                        ],
+                                      )
+                                  );
+
+                                },
+                                style: ButtonStyle(
+                                    backgroundColor:
+                                    MaterialStateProperty.all(Colors.red.shade900)),
+                                child: const Text(
+                                  "Cancelar agendamento ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10.0,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
                       ),
-                    )
+                    ),
+
                 ),
-              )
+              ),
+
 
 
             ]

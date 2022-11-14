@@ -1,10 +1,13 @@
+
+import 'package:custom_grid_view/custom_grid_view.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({Key? key}) : super(key: key);
-
+//final numbers = List.generate(100, => '$index');
+  
   @override
   Widget build(BuildContext context) {
 
@@ -23,7 +26,7 @@ class HomeTab extends StatelessWidget {
     return Stack(
       children: <Widget>[
         _buildBodyBack(),
-        const CustomScrollView(
+         CustomScrollView(
           slivers: <Widget>[
             SliverAppBar(
               floating: true,
@@ -35,25 +38,24 @@ class HomeTab extends StatelessWidget {
                 centerTitle: true,
               ),
             ),
-            /*( FutureBuilder<QuerySnapshot>(
-              future: FirebaseFirestore.instance.collection("home").orderBy("pos").get(),
-              builder: (context, snapshot){
-                if (!snapshot.hasData)
-                  return SliverToBoxAdapter(
-                    child: Container(
-                      height: 200.0,
-                      alignment: Alignment.center,
-                      child: CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                      ),
-                    ),
-                  );
-                else
-                  print
+           ],
+        ),
 
-              },
-            )*/
-          ],
+        Container(
+          margin: const EdgeInsets.only(top: 80.0),
+          child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+           children: [
+             Image(image:AssetImage("assets/imagens/13demaio.png"),),
+             Image(image:AssetImage("assets/imagens/13demaio.png"),),
+             Image(image:AssetImage("assets/imagens/13demaio.png"),),
+             Image(image:AssetImage("assets/imagens/13demaio.png"),),
+             Image(image:AssetImage("assets/imagens/13demaio.png"),),
+             Image(image:AssetImage("assets/imagens/13demaio.png"),),
+             Image(image:AssetImage("assets/imagens/13demaio.png"),),
+             Image(image:AssetImage("assets/imagens/13demaio.png"),),
+             Image(image:AssetImage("assets/imagens/13demaio.png"),),
+
+           ],),
         ),
 
         Container(
@@ -85,3 +87,7 @@ class HomeTab extends StatelessWidget {
     );
   }
 }
+
+
+
+
