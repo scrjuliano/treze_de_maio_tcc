@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:treze_de_maio_tcc/telas/tela_horarios_barbearia.dart';
 
 import '../menu_lateral/perfil/tela_perfil.dart';
 import '../menu_lateral/tela_agendados.dart';
@@ -25,6 +26,7 @@ class Telainical extends StatelessWidget {
         TelaPerfil(),
         TelaAgenda(),
         TelaContato(),
+
         //TelaLogin()
      ],
    );

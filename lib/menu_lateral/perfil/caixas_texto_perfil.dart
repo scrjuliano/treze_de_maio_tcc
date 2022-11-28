@@ -15,46 +15,74 @@ class CaixaTexto extends StatelessWidget {
 
 
 Widget _createTextFieldName(BuildContext context){
-  return Container(
-    height: 40,
-    width: 250,
-    decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.black))),
-    child: ListTile(
-      title: TextField(
-        keyboardType: TextInputType.name,
-        decoration: InputDecoration(hintText: 'Nome',
-          border: OutlineInputBorder(borderSide: BorderSide.none)),
+  return Stack(
+    children: [
+      Container(
+        child: Text(
+          "Nome"
+        ),
       ),
-    ),
+
+      Container(
+        height: 40,
+        width: 250,
+        decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.black))),
+        child: ListTile(
+          title: TextField(
+            keyboardType: TextInputType.name,
+            decoration: InputDecoration(hintText: '',
+                border: OutlineInputBorder(borderSide: BorderSide.none)),
+          ),
+        ),
+      )
+    ],
   );
 }
 
 Widget _createTextFieldEmail(BuildContext context){
-  return Container(
+  return Stack(
+    children: [
+      Container(
+        child: Text(
+          "E-mail"
+        ),
+      ),
+    Container(
     height: 40,
     width: 250,
     decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.black))),
     child: ListTile(
       title: TextField(
         keyboardType: TextInputType.emailAddress,
-        decoration: InputDecoration(hintText: 'E-mail',
+        decoration: InputDecoration(hintText: '',
             border: OutlineInputBorder(borderSide: BorderSide.none)),
       ),
     ),
+  )
+    ],
   );
 }
 
 Widget _createTextFieldPhone(BuildContext context){
-  return Container(
+  return Stack(
+    children: [
+      Container(
+        child: Text(
+          "Telefone"
+        ),
+      ),
+    Container(
     height: 40,
     width: 250,
     decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.black))),
     child: ListTile(
       title: TextField(
         keyboardType: TextInputType.phone,
-        decoration: InputDecoration(hintText: 'Telefone',
+        decoration: InputDecoration(hintText: '',
             border: OutlineInputBorder(borderSide: BorderSide.none)),
       ),
     ),
+  )
+    ],
   );
 }

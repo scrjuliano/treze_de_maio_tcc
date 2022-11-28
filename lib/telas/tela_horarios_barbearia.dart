@@ -1,24 +1,37 @@
+import 'package:calendar_agenda/calendar_agenda.dart';
 import 'package:flutter/material.dart';
 
 import '../tiles/drawer_tile.dart';
 
-class TelaAgenda extends StatelessWidget {
-  const TelaAgenda({Key? key}) : super(key: key);
+class TelaAgendaBarbeiro extends StatelessWidget {
+  const TelaAgendaBarbeiro({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Horarios agendados'),
-        backgroundColor: Colors.black,
-      ),
+
       body: Material(
         color: Colors.black,
         child: ListView(
             children: <Widget>[
               SizedBox(height: 30,),
+              Text(
+                "Minha Agenda",
+                textAlign: TextAlign.center ,
+              style: TextStyle(
+                color: Colors.white,
+              ),
+              ),
+              CalendarAgenda(
 
+                initialDate: DateTime.now(),
+                firstDate: DateTime.now().subtract(Duration(days: 140)),
+                lastDate: DateTime.now().add(Duration(days: 4)),
+                onDateSelected: (date) {
+                  print(date);
+                },
+              ),
               Container(
                 height: 200,
                 child: Card(
@@ -31,7 +44,7 @@ class TelaAgenda extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: <Widget>[
                           Text(
-                              "Profissional:",
+                              "Cliente: ",
                           textAlign: TextAlign.start,
                             style: TextStyle(fontWeight: FontWeight.w500),
                           ),
@@ -107,6 +120,44 @@ class TelaAgenda extends StatelessWidget {
                                   textAlign: TextAlign.center,
                                 ),
                               ),
+                              SizedBox( width: 10.0,),
+                              TextButton(
+                                onPressed: () {
+                                  showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                        title: Text('Confirmação'),
+                                        content: Text('Tem certeza que deseja confirmar este horario? '
+                                        ),
+                                        actions: [
+                                          TextButton(
+                                            child: Text('Sim'),
+                                            onPressed: ()=>  Navigator.pushNamed(
+                                              context,
+                                              ('/home'),
+                                            ),
+                                          ),
+                                          TextButton(
+                                            child: Text('Não'),
+                                            onPressed: ()=> Navigator.pop(context),
+                                          )
+                                        ],
+                                      )
+                                  );
+
+                                },
+                                style: ButtonStyle(
+                                    backgroundColor:
+                                    MaterialStateProperty.all(Colors.grey)),
+                                child: const Text(
+                                  "Confirmar agendamento ",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10.0,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
                             ],
                           )
                         ],
@@ -115,6 +166,7 @@ class TelaAgenda extends StatelessWidget {
 
                 ),
               ),
+
 
 
 

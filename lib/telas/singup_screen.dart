@@ -112,7 +112,7 @@ class TelaCadastro extends GetView<SignUpController> {
             ),
 
             Container(
-              margin: EdgeInsets.only(right: 20, left: 20, top: 20, bottom: 20),
+              margin: EdgeInsets.only(right: 30, left: 30, top: 30, bottom: 30),
               child: TextButton(
                 style: ButtonStyle(
                 backgroundColor:
@@ -120,6 +120,19 @@ class TelaCadastro extends GetView<SignUpController> {
                 onPressed: () {
                 //ANTES DE CHAMAR ESSA FUNÇÂO DE CADASTRO DEVE ADICIONAR VALIDAÇÂO!!!
                 controller.validarCampos();
+                Navigator.pushNamed(
+                    context,
+                ('/home'));
+                showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                    title: Text('Confirmação'),
+                  content: Text('conta criada com sucesso '
+                  ),
+
+                )
+                );
+
               },
               child: Text(
               "Cadastrar",

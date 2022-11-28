@@ -44,7 +44,7 @@ class TelaPerfil extends StatelessWidget {
                   ),
                 TextButton(
                 child: Text('Não'),
-                onPressed: ()=> Navigator.pop(context),
+                onPressed: ()=> Navigator.pushNamed(context,('/home')),
                 )
                 ],
                 )

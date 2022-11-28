@@ -49,6 +49,7 @@ dependencies:
   flutter_staggered_grid_view: "^0.6.2"
   slivers: ^0.0.1+2
   custom_grid_view: ^0.0.1
+  calendar_agenda: ^0.0.2+3
   grid_staggered_lite: ^0.0.6
   table_calendar: ^3.0.3
   get: ^4.6.5
@@ -79,7 +80,16 @@ flutter:
   assets:
     - assets/imagens/13demaio.png
     - assets/imagens/esqueceu-sua-senha.png
-    - assets/imagens/corte1.jpg
+    - assets/imagens/corte1.png
+    - assets/imagens/corte2.png
+    - assets/imagens/corte3.png
+    - assets/imagens/corte4.png
+    - assets/imagens/corte5.png
+    - assets/imagens/corte6.png
+    - assets/imagens/corte7.png
+    - assets/imagens/corte8.png
+    - assets/imagens/corte9.png
+    - assets/imagens/corte10.png
     - assets/imagens/barba.png
 
   #   - images/a_dot_burr.jpeg

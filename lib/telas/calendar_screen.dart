@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:horizontal_card_pager/card_item.dart';
 import 'package:table_calendar/table_calendar.dart';
 
+import '../widgets/custom_drawer.dart';
+
 
 var now = DateTime.now();
 var firstDay = DateTime(now.year, now.month - 3, now.day);
@@ -32,6 +34,7 @@ class CalendarScreen extends StatefulWidget {
 
   @override
   _CalendarScreenState createState() => _CalendarScreenState();
+
 }
 
 class _CalendarScreenState extends State<CalendarScreen> {
@@ -41,10 +44,16 @@ class _CalendarScreenState extends State<CalendarScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      //color: Colors.black,
-      child: Scaffold(
-        body: ListView(
+    return Scaffold(
+        appBar: AppBar(
+        title: Text('Agenda', textAlign: TextAlign.center,),
+    backgroundColor: Colors.black,
+        ),
+
+    //color: Colors.black,
+      body: Material(
+        color: Colors.black,
+        child: ListView(
 
           children: [
             Flexible(
@@ -466,6 +475,652 @@ class _CalendarScreenState extends State<CalendarScreen> {
                               MaterialStateProperty.all(Colors.red.shade900)),
                           child: const Text(
                             "10:30",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "11:00",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "11:30",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "12:00",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "12:30",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "13:00",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "13:30",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "14:00",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "14:30",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "15:00",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "15:30",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "16:00",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "16:30",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "17:00",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "17:30",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      )
+                  ),
+                  Card(
+                      child: Container(
+                        width: 250,
+                        height: 50,
+                        child: TextButton(
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Confirmação'),
+                                  content: Text('Tem certeza que quer agendar este horario? '
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Sim'),
+                                      onPressed: ()=>  Navigator.pushNamed(
+                                        context,
+                                        ('/home'),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      child: Text('Não'),
+                                      onPressed: ()=> Navigator.pop(context),
+                                    )
+                                  ],
+                                )
+                            );
+
+                          },
+                          style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all(Colors.red.shade900)),
+                          child: const Text(
+                            "18:00",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20.0,
